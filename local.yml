@@ -1,0 +1,15 @@
+---
+- name: Setup a workstation
+  hosts: localhost
+
+  tasks:
+    - name: Include base role to install standard packages
+      ansible.builtin.include_role:
+        name: base
+
+    - name: Include other packages based on workstation type
+      when: workstation_type_packages is defined
+      ansible.builtin.include_role:
+        name: "{{ item }}"
+      loop: "{{ workstation_type_packages }}"
+

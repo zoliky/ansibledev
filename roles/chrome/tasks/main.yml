@@ -1,0 +1,9 @@
+---
+- name: Install chrome
+  ansible.builtin.debug:
+    msg: "Installing chrome"
+
+- name: Configure chrome
+  ansible.builtin.debug:
+    msg: "Configuring chrome"
+

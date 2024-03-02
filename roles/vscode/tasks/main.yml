@@ -1,0 +1,9 @@
+---
+- name: Install vscode
+  ansible.builtin.debug:
+    msg: "Installing vscode"
+
+- name: Configure vscode
+  ansible.builtin.debug:
+    msg: "Configuring vscode"
+

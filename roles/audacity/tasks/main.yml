@@ -1,0 +1,9 @@
+---
+- name: Install audacity
+  ansible.builtin.debug:
+    msg: "Installing audacity"
+
+- name: Configure audacity
+  ansible.builtin.debug:
+    msg: "Configuring audacity"
+

@@ -1,0 +1,6 @@
+---
+workstation_type_packages:
+  - chrome
+  - firefox
+  - vscode
+
