@@ -1,6 +1,5 @@
 [workstation:children]
 workstation_developer
-workstation_finance
 
 [workstation]
 zoltan.home.arpa
@@ -8,9 +7,6 @@ localhost
 
 [workstation_developer]
 zoltan.home.arpa
-
-[workstation_finance]
-zoltanfin.home.arpa
 
 [ungrouped]
 zoltanungrouped.home.arpa
