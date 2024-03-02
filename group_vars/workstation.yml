@@ -1,6 +1,5 @@
 ---
 workstation_type_packages:
-  - chrome
   - audacity
   - vlc
 
