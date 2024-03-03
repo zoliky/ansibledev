@@ -1,14 +1,14 @@
- [workstation:children]
+[workstation:children]
 workstation_developer
 
 [workstation]
 peter.something.domain
 localhost
 
-[workstation_developer] # workstation + developer tools
+[workstation_developer]
 zoltan.home.arpa
 
-[workstation_gaming]  # workstation + games
+[workstation_gaming]
 sarah.home.arpa
 
 [ungrouped]
