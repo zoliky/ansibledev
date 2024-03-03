@@ -1,4 +1,5 @@
-[workstation:children]
+[father:children]
+workstation
 workstation_developer
 
 [workstation]
