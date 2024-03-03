@@ -17,3 +17,20 @@
             state: present
           notify:
             - Perform dnf update
+
+    - name: Configure RPM Fusion nonfree
+      block:
+        - name: Add RPM Fusion nonfree GPG key
+          become: true
+          ansible.builtin.rpm_key:
+            fingerprint: "{{ rpmfusion_nonfree_fingerprint }}"
+            key: "{{ rpmfusion_nonfree_gpg_key }}"
+            state: present
+            
+        - name: Add RPM Fusion free repository
+          become: true
+          ansible.builtin.dnf:
+            name: "{{ rpmfusion_nonfree_repository }}"
+            state: present
+          notify:
+            - Perform dnf update
