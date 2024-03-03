@@ -1,5 +1,4 @@
 [workstation:children]
-workstation
 workstation_developer
 
 [workstation]
