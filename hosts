@@ -5,10 +5,10 @@ workstation_developer
 peter.something.domain
 localhost
 
-[workstation_developer]
+[workstation_developer] # workstation + developer tools
 zoltan.home.arpa
 
-[workstation_gaming]
+[workstation_gaming]  # workstation + games
 sarah.home.arpa
 
 [ungrouped]
