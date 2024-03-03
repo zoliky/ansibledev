@@ -1,6 +1,8 @@
 ---
-- name: Install audacity
-  become: true
-  ansible.builtin.package:
-    name: "{{ package_name }}"
-    state: present
+- ansible.builtin.include_tasks: package.yml
+  when:
+    - flatpak is not defined
+    - flatpak is defined and flatpak == false
+
+- ansible.builtin.include_tasks: flatpak.yml
+  when: flatpak is defined and flatpak == true
