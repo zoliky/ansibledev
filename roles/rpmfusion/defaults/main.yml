@@ -1,3 +1,4 @@
+rpmfusion_free_fingerprint: "E9A4 91A3 DE24 7814 E7E0 67EA E06F 8ECD D651 FF2E"
 rpmfusion_free_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
 rpmfusion_free_repository: "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm"
 
