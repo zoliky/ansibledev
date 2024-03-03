@@ -12,5 +12,5 @@
     name: "{{ rpmfusion_free_repository }}"
     state: present
   notify:
-    - Update cache
+    - Perform dnf update
   when: ansible_facts['distribution'] == "Fedora"
