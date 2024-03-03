@@ -1,4 +1,5 @@
 ---
 workstation_type_packages:
   - vscode
+  - rpmfusion
 
