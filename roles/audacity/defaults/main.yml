@@ -1,2 +1,4 @@
 package_name: audacity
 flatpak_name: org.audacityteam.Audacity
+
+flatpak: false
