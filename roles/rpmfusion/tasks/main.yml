@@ -1,4 +1,5 @@
 - name: Add RPM Fusion Free GPG key
+  become: true
   ansible.builtin.rpm_key:
     key: "{{ rpmfusion_free_gpg_key }}"
     state: present
