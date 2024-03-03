@@ -9,7 +9,7 @@
         name: base
 
     - name: Include other packages based on workstation type
-      when:  is defined
+      when: workstation_type_packages is defined
       ansible.builtin.include_role:
         name: "{{ item }}"
       loop: "{{ workstation_type_packages }}"
