@@ -1,9 +1,10 @@
 ---
-- name: Install audacity
+- name: Debug message audacity
   ansible.builtin.debug:
     msg: "Installing audacity"
 
-- name: Configure audacity
-  ansible.builtin.debug:
-    msg: "Configuring audacity"
-
+- name: Install audacity
+  become: true
+  ansible.builtin.package:
+    name: "{{ package_name }}"
+    state: present

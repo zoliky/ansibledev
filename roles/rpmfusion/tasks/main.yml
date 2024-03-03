@@ -27,7 +27,7 @@
             key: "{{ rpmfusion_nonfree_gpg_key }}"
             state: present
             
-        - name: Add RPM Fusion free repository
+        - name: Add RPM Fusion nonfree repository
           become: true
           ansible.builtin.dnf:
             name: "{{ rpmfusion_nonfree_repository }}"
