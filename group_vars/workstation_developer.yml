@@ -2,4 +2,5 @@
 workstation_type_packages:
   - rpmfusion
   - audacity
+  - gnome
 
