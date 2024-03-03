@@ -1,4 +1,4 @@
-- name: Add RPM Fusion Free GPG key
+- name: Add RPM Fusion free GPG key
   become: true
   ansible.builtin.rpm_key:
     fingerprint: "{{ rpmfusion_free_fingerprint }}"
@@ -6,7 +6,7 @@
     state: present
   when: ansible_facts['distribution'] == "Fedora"
 
-- name: Add RPM Fusion Free repository
+- name: Add RPM Fusion free repository
   become: true
   ansible.builtin.dnf:
     name: "{{ rpmfusion_free_repository }}"
