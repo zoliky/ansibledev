@@ -3,7 +3,7 @@ zoltan.home.arpa
 localhost
 
 [workstation_developer]
-zoltandev.home.arpa
+zoltan.home.arpa
 
 [father:children]
 workstation
