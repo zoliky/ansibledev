@@ -1,8 +1,4 @@
 ---
-- name: Debug message audacity
-  ansible.builtin.debug:
-    msg: "Installing audacity"
-
 - name: Install audacity
   become: true
   ansible.builtin.package:
