@@ -1,12 +1,12 @@
-[workstation:children]
-workstation_developer
+[workstation_developer:children]
+workstation
 
 [workstation]
-zoltan.home.arpa
+zoltananother.home.arpa
 localhost
 
 [workstation_developer]
-zoltandev.home.arpa
+zoltan.home.arpa
 
 [ungrouped]
 zoltanungrouped.home.arpa
