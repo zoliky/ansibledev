@@ -3,8 +3,8 @@ workstation
 workstation_developer
 
 [workstation]
-localhost
 zoltan.home.arpa
+localhost
 
 [workstation_developer]
 zoltandev.home.arpa
