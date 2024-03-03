@@ -1,8 +1,8 @@
-[workstation:children]
+ [workstation:children]
 workstation_developer
 
 [workstation]
-zoltanwrk.home.arpa
+peter.something.domain
 localhost
 
 [workstation_developer]
