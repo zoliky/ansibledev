@@ -1,6 +1,6 @@
 ---
 - ansible.builtin.include_tasks: package.yml
-  when: flatpak is defined and flatpak is false
+  when: not install_from_flatpak
 
 - ansible.builtin.include_tasks: flatpak.yml
-  when: flatpak is defined and flatpak is true
+  when: install_from_flatpak
