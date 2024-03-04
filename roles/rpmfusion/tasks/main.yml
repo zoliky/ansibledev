@@ -9,13 +9,14 @@
             fingerprint: "{{ rpmfusion_free_fingerprint }}"
             key: "{{ rpmfusion_free_gpg_key }}"
             state: present
-          register: myoutput
 
         - name: Add RPM Fusion free repository
           become: true
           ansible.builtin.dnf:
             name: "{{ rpmfusion_free_repository }}"
             state: present
+          notify:
+            - Update cache
 
     - name: Configure RPM Fusion nonfree
       block:
@@ -31,15 +32,20 @@
           ansible.builtin.dnf:
             name: "{{ rpmfusion_nonfree_repository }}"
             state: present
+          notify:
+            - Update cache
 
-- name: Update cache
-  become: true
-  ansible.builtin.dnf:
-    update_cache: true
-  when:
-    - myoutput.changed
-    - rpmfusion_free_enable or rpmfusion_nonfree_enable
+- name: Run handlers
+  ansible.builtin.meta: flush_handlers
+            
+#- name: Update cache
+#  become: true
+#  ansible.builtin.dnf:
+#    update_cache: true
+#  when:
+#    - myoutput.changed
+#    - rpmfusion_free_enable or rpmfusion_nonfree_enable
 
-- name: Debug
-  ansible.builtin.debug:
-    var: myoutput
+#- name: Debug
+#  ansible.builtin.debug:
+#    var: myoutput

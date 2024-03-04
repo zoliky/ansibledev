@@ -1,5 +1,5 @@
 ---
 
-- name: Perform dnf update
+- name: Update cache
   ansible.builtin.dnf:
     update_cache: true
