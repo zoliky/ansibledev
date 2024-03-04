@@ -30,3 +30,9 @@
           ansible.builtin.dnf:
             name: "{{ rpmfusion_nonfree_repository }}"
             state: present
+
+- name: Update cache
+  become: true
+  ansible.builtin.dnf:
+    update_cache: true
+  when: rpmfusion_free_enable or rpmfusion_nonfree_enable
