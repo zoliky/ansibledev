@@ -9,6 +9,7 @@
             fingerprint: "{{ rpmfusion_free_fingerprint }}"
             key: "{{ rpmfusion_free_gpg_key }}"
             state: present
+          register: myoutput
 
         - name: Add RPM Fusion free repository
           become: true
@@ -36,3 +37,7 @@
   ansible.builtin.dnf:
     update_cache: true
   when: rpmfusion_free_enable or rpmfusion_nonfree_enable
+
+- name: Debug
+  ansible.builtin.debug:
+    var: myoutput
