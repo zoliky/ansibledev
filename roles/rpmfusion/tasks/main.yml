@@ -36,7 +36,9 @@
   become: true
   ansible.builtin.dnf:
     update_cache: true
-  when: rpmfusion_free_enable or rpmfusion_nonfree_enable
+  when:
+    - myoutput.changed
+    - rpmfusion_free_enable or rpmfusion_nonfree_enable
 
 - name: Debug
   ansible.builtin.debug:
