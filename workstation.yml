@@ -1,7 +1,7 @@
 ---
 - name: Setup a workstation
   hosts: "{{ target }}"
-  connection: local # we're debugging, so the hosts may not exist
+  #connection: local # we're debugging, so the hosts may not exist
 
   tasks:
     - name: Include base role to install standard packages
