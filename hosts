@@ -1,6 +1,5 @@
 [computers:children]
 workstation
-workstation_developer
 
 [workstation]
 zoltan.home.arpa
