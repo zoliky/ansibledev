@@ -8,10 +8,17 @@
       ansible.builtin.include_role:
         name: base
 
-    - name: Include other roles based on workstation type
-      when: workstation_roles is defined
-      ansible.builtin.include_role:
+    - name: Include variables from workstation.yml
+      include_vars:
+        file: group_vars/workstation.yml
+      when: "'workstation' in group_names"
+
+    - name: Include variables from workstation_developer.yml
+      include_vars:
+        file: group_vars/workstation_developer.yml
+      when: "'workstation_developer' in group_names"
+
+    - name: Include roles
+      include_role:
         name: "{{ item }}"
-      loop: "{{ workstation_roles | default([]) }}"
-      vars:
-        workstation_variable: "{{ workstation | default([]) + workstation_developer | default([]) }}"
+      with_items: "{{ workstation_roles }}"
