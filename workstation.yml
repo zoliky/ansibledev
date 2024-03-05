@@ -14,4 +14,4 @@
         name: "{{ item }}"
       loop: "{{ workstation_variable | default([]) }}"
       vars:
-        workstation_variable: "{{ (workstation_variable | default([])) | union(workstation_variable_developer | default([])) }}"
+        workstation_variable: "{{ (workstation | default([])) | union(workstation_developer | default([])) }}"
