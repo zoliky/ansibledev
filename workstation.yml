@@ -14,4 +14,4 @@
         name: "{{ item }}"
       loop: "{{ workstation_roles | default([]) }}"
       vars:
-        workstation_variable: "{{ workstation_roles | default([]) | combine(hostvars[inventory_hostname]['workstation_roles'] | default([])) }}"
+        workstation_variable: "{{ workstation | default([]) + workstation_developer | default([]) }}"
