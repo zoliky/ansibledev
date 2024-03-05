@@ -12,4 +12,4 @@
       when: workstation_roles is defined
       ansible.builtin.include_role:
         name: "{{ item }}"
-      loop: "{{ groups['workstation'] }}"
+      with_first_found: "{{ workstation_roles }}"
