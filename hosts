@@ -4,7 +4,7 @@ workstation_developer
 
 [workstation]
 zoltan.home.arpa
-#localhost
+localhost
 
 [workstation_developer]
 zoltan.home.arpa
