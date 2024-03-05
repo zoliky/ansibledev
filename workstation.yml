@@ -12,4 +12,6 @@
       when: workstation_roles is defined
       ansible.builtin.include_role:
         name: "{{ item }}"
-      loop: "{{ groups | map('extract', hostvars, 'workstation_roles') | flatten | unique }}"
+      loop: "{{ workstation_variable | default([]) }}"
+      vars:
+        workstation_variable: "{{ (workstation_variable | default([])) | union(workstation_variable_developer | default([])) }}"
