@@ -1,5 +1,5 @@
-#[workstation:children]
-#workstation_developer
+[workstation:children]
+workstation_developer
 #workstation_finance
 
 [workstation]
