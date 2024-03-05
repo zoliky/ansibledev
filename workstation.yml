@@ -12,6 +12,4 @@
       when: workstation_roles is defined
       ansible.builtin.include_role:
         name: "{{ item }}"
-      with_first_found:
-        - "{{ groups['workstation'] | map('extract', hostvars, ['workstation_roles']) | list }}"
-        - "{{ groups['workstation'] | map('extract', hostvars, ['workstation_roles']) | list }}"
+      loop: "{{ groups | map('extract', hostvars, 'workstation_roles') | flatten | unique }}"
