@@ -1,6 +1,9 @@
 ---
-- ansible.builtin.include_tasks: package.yml
-  when: not install_from_flatpak
+- name: Install audacity
+  ansible.builtin.debug:
+    msg: "Installing audacity"
 
-- ansible.builtin.include_tasks: flatpak.yml
-  when: install_from_flatpak
+- name: Configure audacity
+  ansible.builtin.debug:
+    msg: "Configuring audacity"
+

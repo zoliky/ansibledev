@@ -1,15 +1,16 @@
 [workstation:children]
 workstation_developer
+workstation_finance
 
 [workstation]
-peter.something.domain
+zoltan.home.arpa
 localhost
 
 [workstation_developer]
-zoltan.home.arpa
+zoltandev.home.arpa
 
-[workstation_gaming]
-sarah.home.arpa
+[workstation_finance]
+zoltanfin.home.arpa
 
 [ungrouped]
 zoltanungrouped.home.arpa

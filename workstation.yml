@@ -13,3 +13,4 @@
       ansible.builtin.include_role:
         name: "{{ item }}"
       loop: "{{ workstation_type_packages }}"
+
