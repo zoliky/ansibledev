@@ -12,6 +12,6 @@
       when: workstation_roles is defined
       ansible.builtin.include_role:
         name: "{{ item }}"
-      loop: "{{ workstation_variable | default([]) }}"
+      loop: "{{ workstation_roles | default([]) }}"
       vars:
-        workstation_variable: "{{ (workstation | default([])) | union(workstation_developer | default([])) }}"
+        workstation_variable: "{{ workstation_roles | default([]) | combine(hostvars[inventory_hostname]['workstation_roles'] | default([])) }}"
