@@ -1,5 +1,5 @@
 ---
-- name: Add the RPM Fusion free GPG key
+- name: Add RPM Fusion free GPG key
   become: true
   ansible.builtin.rpm_key:
     fingerprint: "{{ rpmfusion_free_fingerprint }}"
@@ -7,7 +7,7 @@
     state: present
   when: ansible_facts['distribution'] == "Fedora"
 
-- name: Add the RPM Fusion nonfree GPG key
+- name: Add RPM Fusion nonfree GPG key
   become: true
   ansible.builtin.rpm_key:
     fingerprint: "{{ rpmfusion_nonfree_fingerprint }}"
@@ -15,7 +15,7 @@
     state: present
   when: ansible_facts['distribution'] == "Fedora"
 
-- name: Add the RPM Fusion free repository
+- name: Add RPM Fusion free repository
   become: true
   ansible.builtin.dnf:
     name: "{{ rpmfusion_free_repository }}"
@@ -24,7 +24,7 @@
       - Update cache
   when: ansible_facts['distribution'] == "Fedora"
 
-- name: Add the RPM Fusion nonfree repository
+- name: Add RPM Fusion nonfree repository
   become: true
   ansible.builtin.dnf:
     name: "{{ rpmfusion_nonfree_repository }}"
