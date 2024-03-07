@@ -5,6 +5,7 @@
     fingerprint: "{{ rpmfusion_free_fingerprint }}"
     key: "{{ rpmfusion_free_gpg_key }}"
     state: present
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: Add the RPM Fusion nonfree GPG key
   become: true
@@ -12,6 +13,7 @@
     fingerprint: "{{ rpmfusion_nonfree_fingerprint }}"
     key: "{{ rpmfusion_nonfree_gpg_key }}"
     state: present
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: Add the RPM Fusion free repository
   become: true
@@ -20,6 +22,7 @@
     state: present
     notify:
       - Update cache
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: Add the RPM Fusion nonfree repository
   become: true
@@ -28,6 +31,7 @@
     state: present
     notify:
       - Update cache
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: Run handlers
   ansible.builtin.meta: flush_handlers
