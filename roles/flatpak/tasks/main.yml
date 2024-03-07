@@ -1,22 +1,28 @@
 ---
-- name: Load a variable file based on the OS type, or a default if not found
+- name: Include OS specific variables
   ansible.builtin.include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
   vars:
     params:
       files:
-        - '{{ ansible_distribution | lower }}.yml'
-        - '{{ ansible_os_family | lower }}.yml'
+        - "{{ ansible_distribution | lower }}.yml"
+        - "{{ ansible_os_family | lower }}.yml"
         - default.yml
       paths:
-        - 'vars'
+        - "vars"
 
-- name: Install flatpak
+- name: Validate variables
+  ansible.builtin.assert:
+    that:
+      - package_name is defined
+      - flatpak_flathub_repo_url is defined
+
+- name: Install Flatpak
   become: true
   ansible.builtin.package:
     name: "{{ package_name }}"
     state: present
 
-- name: Install Flathub remote
+- name: Add the Flathub repository
   become: true
   community.general.flatpak_remote:
     name: flathub
