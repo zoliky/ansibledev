@@ -10,12 +10,6 @@
       paths:
         - "vars"
 
-- name: Validate variables
-  ansible.builtin.assert:
-    that:
-      - package_name is defined
-      - flatpak_flathub_repo_url is defined
-
 - name: Install Flatpak
   become: true
   ansible.builtin.package:
