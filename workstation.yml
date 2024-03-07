@@ -4,12 +4,6 @@
   connection: local # we're debugging, so the hosts may not exist
 
   tasks:
-    - name: Validate variables
-      ansible.builtin.assert:
-        that:
-          - package_name is defined
-          - flatpak_flathub_repo_url is defined
-    
     - name: Include base role to install standard packages
       ansible.builtin.include_role:
         name: base
