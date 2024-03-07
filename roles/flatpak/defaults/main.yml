@@ -1,2 +1,4 @@
 ---
 package_name: flatpak
+
+flatpak_flathub_repo_url: "https://flathub.org/repo/flathub.flatpakrepo"

@@ -5,10 +5,9 @@
     name: "{{ package_name }}"
     state: present
 
-- name: Add Flathub remote
+- name: Install Flathub remote
   community.general.flatpak_remote:
     name: flathub
-    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    flatpakrepo_url: "{{ flatpak_flathub_repo_url }}"
     state: present
-    method: system
-    #method: user
+    method: user
