@@ -1,4 +1,1 @@
 ---
-__role_file_search_order:
-  - "{{ (ansible_facts['distribution'] | lower) | replace(' ', '_') }}" # centos.yml
-  - "default.yml"
