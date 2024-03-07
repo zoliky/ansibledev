@@ -1,4 +1,18 @@
 ---
+# Set all variables matching this platform
+- name: "Main | Set platform/version specific variables"
+  ansible.builtin.include_vars: "{{ __role_found_vars }}"
+  vars:
+    __role_find_vars:
+      files: ["{{ __role_var_search }}"]
+      skip: true
+      paths: ["{{ role_path }}/vars"]
+    __role_found_vars: "{{ lookup('ansible.builtin.first_found', __role_find_vars) }}"
+  when: __role_found_vars | length > 0  # Check if any variables were found
+  loop: "{{ __role_file_search_order | reverse | unique }}"  # reverse order to allow for more specific variables to override less specific ones
+  loop_control:
+    loop_var: __role_var_search
+
 - name: Install flatpak
   become: true
   ansible.builtin.package:
