@@ -2,3 +2,4 @@
 workstation_roles:
   - flatpak
   - rpmfusion
+  - audacity
