@@ -1,11 +1,20 @@
 Ansible Development Repository
 ==============================
 
+About
+-----
+
+..
+
 Requirements
 ------------
 
+..
+
 Dependencies
 ------------
+
+..
 
 Example Playbook
 ----------------
