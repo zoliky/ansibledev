@@ -1,10 +1,10 @@
-Ansible Development Repository
-==============================
+IT Automation Project
+=====================
 
 About
 -----
 
-Work in progrss
+Work in progress
 
 ```
 $ ansible-playbook workstation.yml -e "target=workstation"
@@ -14,7 +14,8 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 Requirements
 ------------
 
-- Ansible 2.14 or later.
+- Ansible 2.14 or later
+- Git
 
 Dependencies
 ------------
