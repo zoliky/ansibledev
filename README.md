@@ -30,7 +30,7 @@ Host variables
 Role variables
 --------------
 
-The `defaults` folder in each role contains default variables that users shouldn't change there. On the other hand, the `vars` folder holds variables intended for user modification, which override the ones in `defaults`. In simpler terms, the `vars` folder takes precedence over `defaults`.
+The `defaults` folder in each role contains default variables that users should NOT change there. On the other hand, the `vars` folder holds variables intended for user modification, which override the ones in `defaults`. In simpler terms, the `vars` folder takes precedence over `defaults`.
 
 Example scenario:
 
