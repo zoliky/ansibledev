@@ -6,6 +6,8 @@ Ansible role for installing Audacity.
 Requirements
 ------------
 
+- Ansible 2.14 or later.
+
 Role variables
 --------------
 
