@@ -1,9 +1,0 @@
----
-- name: Install VLC
-  ansible.builtin.debug:
-    msg: "Installing VLC"
-
-- name: Configure VLC
-  ansible.builtin.debug:
-    msg: "Configuring VLC"
-

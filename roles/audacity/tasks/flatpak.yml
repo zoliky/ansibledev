@@ -1,6 +1,0 @@
----
-- name: Install audacity flatpak
-  community.general.flatpak:
-    name: "{{ flatpak_name }}"
-    state: present
-    method: user

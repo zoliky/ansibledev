@@ -1,4 +1,0 @@
-package_name: audacity
-flatpak_name: org.audacityteam.Audacity
-
-install_from_flatpak: false
