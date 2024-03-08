@@ -28,7 +28,7 @@ This folder allows groups to be defined to provision computers with different se
 
 Example:
 
-John is a developer and he's in the `workstation_developer` group. Sarah wants lots of board and puzzle games, so she's in the `workstation_gaming` group. Zoltan loves using Emacs and needs LaTeX, which is really big (8GB), so he's in the `workstation_editing` group. John and Sarah don't want such a big thing. John and Sarah prefer not to have such large software installed and configured on their machines.
+John is a developer and he's in the `workstation_developer` group. Sarah wants lots of board and puzzle games, so she's in the `workstation_gaming` group. Zoltan loves using Emacs and needs LaTeX, which is really big (8GB), so he's in the `workstation_editing` group. John and Sarah prefer not to have such large software installed and configured on their machines.
 
 
 Host variables
