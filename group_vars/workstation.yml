@@ -4,3 +4,4 @@ workstation_roles:
   - rpmfusion
   - audacity
   - blender
+  - filezilla
