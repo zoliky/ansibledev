@@ -1,1 +1,7 @@
 ---
+- name: Install Microsoft fonts
+  become: true
+  ansible.builtin.dnf:
+    disable_gpg_check: true
+    name: https://rpmfind.net/linux/sourceforge/m/ms/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+    state: present

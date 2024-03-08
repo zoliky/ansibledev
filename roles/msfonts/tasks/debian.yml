@@ -1,1 +1,6 @@
 ---
+- name: Install Microsoft fonts
+  become: true
+  ansible.builtin.package:
+    name: ttf-mscorefonts-installer
+    state: present
