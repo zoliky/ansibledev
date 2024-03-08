@@ -30,9 +30,11 @@ Host variables
 Role variables
 --------------
 
-The `defaults` folder in each role contains default variables that users should NOT change there. On the other hand, the `vars` folder holds variables intended for user modification, which override the ones in `defaults`. In simpler terms, the `vars` folder takes precedence over `defaults`.
+The `defaults` folder in each role contains default variables that users should NOT change. On the other hand, the `vars` folder holds variables intended for user modification, which override the ones in `defaults`. In simpler terms, the `vars` folder takes precedence over `defaults`.
 
-Example scenario:
+Example:
+
+Suppose we're setting up ten different Linux distributions. Nine of them refer to the spell check package as `hunspell`. However, Mageia Linux calls it `hunspell-us`. To address this difference, we create a new file named `mageia.yml` in the `vars` folder. Inside this file, we define a custom variable called `package_name` and set it to `hunspell-us`. This variable takes precedence over the default value defined in the `defaults` folder specifically for Mageia Linux, while retaining the default value for all other distributions.
 
 
 Example Playbook
