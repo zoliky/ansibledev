@@ -1,6 +1,3 @@
 ---
-- name: Install Audacity
-  become: true
-  ansible.builtin.package:
-    name: "{{ package_name }}"
-    state: present
+- name: Include task
+  ansible.builtin.include_tasks: default.yml
