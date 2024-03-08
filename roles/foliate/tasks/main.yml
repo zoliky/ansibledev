@@ -1,0 +1,6 @@
+---
+- name: Install Foliate
+  become: true
+  ansible.builtin.package:
+    name: "{{ package_name }}"
+    state: present
