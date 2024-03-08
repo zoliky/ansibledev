@@ -34,8 +34,7 @@ The `defaults` folder in each role contains default variables that users should 
 
 Example:
 
-Suppose we're setting up ten different Linux distributions. Nine of them refer to the spell check package as `hunspell`. However, Mageia Linux calls it `hunspell-us`. To address this difference, we create a new file named `mageia.yml` in the `vars` folder. Inside this file, we define a custom variable called `package_name` and set it to `hunspell-us`. This variable takes precedence over the default value defined in the `defaults` folder specifically for Mageia Linux, while retaining the default value for all other distributions.
-
+Imagine we're setting up ten different Linux distributions. While nine of them refer to the spell check package as `hunspell`, Mageia Linux uses `hunspell-us`. To handle this difference, we create a new file named `mageia.yml` in the `vars` folder. Inside, we define a custom variable `package_name` as `hunspell-us`. Ansible will prioritize this variable over the one defined in the `defaults` folder specifically for Mageia Linux, while retaining the default value for all other Linux distributions.
 
 Example Playbook
 ----------------
