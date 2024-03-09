@@ -1,0 +1,10 @@
+---
+- name: Ansible Distribution
+  ansible.builtin.debug:
+    msg: "Ansible distribution: {{ ansible_distribution }}"
+
+- name: Ansible OS Family
+  ansible.builtin.debug:
+    msg: "Ansible OS family: {{ ansible_os_family }}"
+
+

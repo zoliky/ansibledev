@@ -1,7 +1,8 @@
 ---
 workstation_roles:
-  - flatpak
-  - rpmfusion
-  - audacity
-  - blender
-  - filezilla
+  - mydebug
+#  - flatpak
+#  - rpmfusion
+#  - audacity
+#  - blender
+#  - filezilla
