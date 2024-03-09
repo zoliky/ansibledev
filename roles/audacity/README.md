@@ -11,6 +11,13 @@ Requirements
 Role variables
 --------------
 
+| ansible_distribution | ansible_os_family |
+| -------------------- | ----------------- |
+| Debian               | Debian            |
+| Linux Mint           | Debian            |
+| openSUSE Leap        | Suse              |
+| Fedora               | RedHat            |
+
 Dependencies
 ------------
 
