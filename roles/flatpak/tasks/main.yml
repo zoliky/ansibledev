@@ -9,7 +9,7 @@
         #- default.yml
       paths:
         - "vars"
-  skip: true
+    skip: true
   when: params | length > 0
 
 - name: Include OS-specific tasks
