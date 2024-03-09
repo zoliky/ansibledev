@@ -10,6 +10,7 @@
       paths:
         - "vars"
       skip: true
+  when: files | length > 0
 
 - name: Include OS-specific tasks
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
