@@ -9,8 +9,8 @@
         #- default.yml
       paths:
         - "vars"
-    skip: true
-  when: params | length > 0
+      skip: true
+  when: params | length > 1
 
 - name: Include OS-specific tasks
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
