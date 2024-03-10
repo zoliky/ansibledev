@@ -19,5 +19,5 @@
   ansible.builtin.apt:
     name: google-chrome-stable
     state: present
-    update_cache: true
     force_apt_get: true
+    update_cache: true
