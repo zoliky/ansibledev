@@ -21,7 +21,7 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 | Debian 12 Bookworm                      | DONE             |
 | Fedora 39                               | Work in progress |
 | Linux Mint 21.3 Virginia                | DONE             |
-| Linux Mint Debian Edition 6 Faye        | Work in progress |
+| Linux Mint Debian Edition 6 Faye        | DONE             |
 | openSUSE Leap 15.5                      | Work in progress |
 | openSUSE Tumbleweed                     | DONE             |
 | Red Hat Enterprise Linux                | Work in progress |
