@@ -1,6 +1,6 @@
 ---
 workstation_roles:
-  - mydebug
+  - chrome
 #  - flatpak
 #  - rpmfusion
 #  - audacity

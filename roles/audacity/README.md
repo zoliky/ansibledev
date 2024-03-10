@@ -28,7 +28,7 @@ Example Playbook
 
 ```
 ---
-- hosts: localhost
+- hosts: localhost  
   tasks:
     - ansible.builtin.include_role: audacity
 ```

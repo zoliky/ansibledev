@@ -1,0 +1,13 @@
+---
+- name: Add Chrome repository
+  become: true
+  ansible.builtin.apt_repository:
+    repo: deb [arch=amd64 signed-by=/etc/apt/keyrings/linux_signing_key.pub] http://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+    filename: google-chrome
+
+- name: Install Chrome
+  become: true
+  ansible.builtin.package:
+    name: google-chrome-stable
+    state: present
