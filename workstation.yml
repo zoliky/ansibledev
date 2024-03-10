@@ -4,10 +4,16 @@
   connection: local # we're debugging, so the hosts may not exist
 
   tasks:
-    - name: Include base role to install standard packages
-      ansible.builtin.include_role:
-        name: base
-
+    # Testing
+    - name: Check memory and free space
+      ansible.builtin.assert:
+        that:
+          # Check that the system has over 200MB of memory and
+          # 20GB of disk space free
+          - "ansible_facts.memfree_mb > 200" # we're using virtual machines for now, so low value is preferred
+          - "ansible_facts.diskfree_gb > 20"
+    
+    # Provisioning
     - name: Include roles
       ansible.builtin.include_role:
         name: "{{ item }}"

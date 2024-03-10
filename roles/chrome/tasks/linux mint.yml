@@ -1,4 +1,11 @@
 ---
+- name: Add Chrome repository key
+  become: true
+  ansible.builtin.get_url:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    dest: /etc/apt/keyrings/linux_signing_key.pub
+    mode: '0644'
+
 - name: Add Chrome repository
   become: true
   ansible.builtin.apt_repository:
