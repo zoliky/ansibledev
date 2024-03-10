@@ -12,7 +12,9 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 ```
 
  
-roles/chrome
+*Module currently under development:*
+
+`roles/chrome`:
  
 | Distribution             | Status           |
 |--------------------------|------------------|
@@ -21,7 +23,11 @@ roles/chrome
 | Linux Mint 21.3 Virginia | Work in progress. Error: Could not get lock /var/lib/apt/lists/lock |
 | Linux Debian Edition     | Work in progress |
 | openSUSE Leap 15.5       | Work in progress. Error: Could not resolve module zypper_repository |
-| openSUSE Tumbleweed      | Work in progreee |
+| openSUSE Tumbleweed      | Work in progress |
+| Red Hat Enterprise Linux | Work in progress |
+| Ubuntu Linux             | Work in progress |
+| Manjaro Linux            | Work in progress |
+| MX Linux                 | Work in progress |
 
 
 Requirements
