@@ -23,7 +23,7 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 | Linux Mint 21.3 Virginia                | DONE             |
 | Linux Mint Debian Edition 6 Faye        | Work in progress |
 | openSUSE Leap 15.5                      | Work in progress. Error: Could not resolve module zypper_repository |
-| openSUSE Tumbleweed                     | Work in progress |
+| openSUSE Tumbleweed                     | DONE             |
 | Red Hat Enterprise Linux                | Work in progress |
 | Ubuntu Linux                            | Work in progress |
 | Manjaro Linux                           | Work in progress |
