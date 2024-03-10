@@ -12,7 +12,7 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 ```
 
  
-*Module currently under development:*
+**Module currently under development:**
 
 `roles/chrome`:
  
