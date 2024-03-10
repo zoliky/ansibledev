@@ -16,19 +16,18 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 
 **`roles/chrome`:**
  
-| Distribution                  | Status           |
-|-------------------------------|------------------|
-| Debian 12 Bookworm            | DONE             |
-| Fedora 39                     | DONE             |
-| Linux Mint 21.3 Virginia      | Work in progress. Error: Could not get lock /var/lib/apt/lists/lock |
-| Linux Mint Debian Edition     | Work in progress |
-| openSUSE Leap 15.5            | Work in progress. Error: Could not resolve module zypper_repository |
-| openSUSE Tumbleweed           | Work in progress |
-| Red Hat Enterprise Linux      | Work in progress |
-| Ubuntu Linux                  | Work in progress |
-| Manjaro Linux                 | Work in progress |
-| MX Linux                      | Work in progress |
-
+| Distribution                            | Status           |
+|-----------------------------------------|------------------|
+| Debian 12 Bookworm                      | DONE             |
+| Fedora 39                               | DONE             |
+| Linux Mint 21.3 Virginia                | Work in progress. Error: Could not get lock /var/lib/apt/lists/lock |
+| Linux Mint Debian Edition 6 Faye        | Work in progress |
+| openSUSE Leap 15.5                      | Work in progress. Error: Could not resolve module zypper_repository |
+| openSUSE Tumbleweed                     | Work in progress |
+| Red Hat Enterprise Linux                | Work in progress |
+| Ubuntu Linux                            | Work in progress |
+| Manjaro Linux                           | Work in progress |
+| MX Linux                                | Work in progress |
 
 Requirements
 ------------
