@@ -1,10 +1,12 @@
 ---
 - name: Add RPM signing key
+  become: true
   ansible.builtin.rpm_key:
     key: https://dl.google.com/linux/linux_signing_key.pub
     state: present
 
 - name: Add repository into repo list
+  become: true
   community.general.zypper_repository:
     name: google-chrome
     description: google-chrome repository
@@ -15,6 +17,7 @@
     enabled: true
 
 - name: Install Chrome
+  become: true
   community.general.zypper:
     name: google-chrome-stable
     state: present
