@@ -12,14 +12,10 @@
     repo: deb [arch=amd64 signed-by=/etc/apt/keyrings/linux_signing_key.pub] http://dl.google.com/linux/chrome/deb/ stable main
     state: present
     filename: google-chrome
-    update_cache: true
-    update_cache_retries: 100
 
 - name: Install Chrome
   become: true
   ansible.builtin.apt:
     name: google-chrome-stable
     state: present
-    update_cache: true
-    update_cache_retries: 100
 
