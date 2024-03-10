@@ -11,6 +11,19 @@ $ ansible-playbook workstation.yml -e "target=workstation"
 $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 ```
 
+ 
+roles/chrome
+ 
+| Distribution             | Status           |
+|--------------------------|------------------|
+| Debian 12 Bookworm       | DONE             |
+| Fedora 39                | DONE             |
+| Linux Mint 21.3 Virginia | Work in progress. Error: Could not get lock /var/lib/apt/lists/lock |
+| Linux Debian Edition     | Work in progress |
+| openSUSE Leap 15.5       | Work in progress. Error: Could not resolve module zypper_repository |
+| openSUSE Tumbleweed      | Work in progreee |
+
+
 Requirements
 ------------
 
