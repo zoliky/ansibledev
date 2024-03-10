@@ -5,6 +5,7 @@
 
   tasks:
     # Testing
+    # Fail as early as possible to prevent later issues during provisioning
     #- name: Check memory and free space
     #  ansible.builtin.assert:
     #    that:
@@ -12,6 +13,11 @@
           # and 20GB of disk space free
     #      - "ansible_facts.memfree_gb > 1"
     #      - "ansible_facts.diskfree_gb > 20"
+
+    #- name: Check if all variables are set and they use the proper data type
+    #  ansible.builtin.assert:
+    #  that:
+    #     ..
     
     # Provisioning
     - name: Include roles
