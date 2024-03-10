@@ -12,7 +12,7 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 ```
 
  
-**Module currently under development:**
+**Modules currently under development:**
 
 **`roles/chrome`:**
  
@@ -28,6 +28,15 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 | Ubuntu Linux                            | Work in progress |
 | Manjaro Linux                           | Work in progress |
 | MX Linux                                | Work in progress |
+
+**`roles/rpmfusion`:**
+ 
+| Distribution                            | Status           |
+|-----------------------------------------|------------------|
+| Fedora 39                               | DONE             |
+| Red Hat Enterprise Linux                | Work in progress |
+| AlmaLinux                               | Work in progress |
+| Rocky Linux                             | Work in progress |
 
 Requirements
 ------------
