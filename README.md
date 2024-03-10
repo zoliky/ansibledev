@@ -27,7 +27,7 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 | Red Hat Enterprise Linux                | Work in progress |
 | Ubuntu Linux                            | Work in progress |
 | Manjaro Linux                           | Work in progress |
-| MX Linux                                | Work in progress |
+| MX Linux                                | DONE             |
 
 **`roles/rpmfusion`:**
  
