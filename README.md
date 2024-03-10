@@ -4,7 +4,7 @@ IT Automation Project
 About
 -----
 
-This project will replace my old Ansible setup once it's finished.
+Work in progress.
 
 ---
 
