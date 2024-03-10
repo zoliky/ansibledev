@@ -12,7 +12,7 @@
     auto_import_keys: true
     state: present
     runrefresh: true
-    enable: true
+    enabled: true
 
 - name: Install Chrome
   community.general.zypper:
