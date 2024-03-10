@@ -6,8 +6,6 @@ About
 
 Work in progress.
 
----
-
 ```
 $ ansible-playbook workstation.yml -e "target=workstation"
 $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
