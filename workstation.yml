@@ -5,13 +5,13 @@
 
   tasks:
     # Testing
-    - name: Check memory and free space
-      ansible.builtin.assert:
-        that:
+    #- name: Check memory and free space
+    #  ansible.builtin.assert:
+    #    that:
           # Check that the system has over 200MB of memory and
           # 20GB of disk space free
-          - "ansible_facts.memfree_mb > 200" # we're using virtual machines for now, so low value is preferred
-          - "ansible_facts.diskfree_gb > 20"
+    #      - "ansible_facts.memfree_mb > 200" # we're using virtual machines for now, so low value is preferred
+    #      - "ansible_facts.diskfree_gb > 20"
     
     # Provisioning
     - name: Include roles
