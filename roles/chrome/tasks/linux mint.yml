@@ -12,12 +12,12 @@
     repo: deb [arch=amd64 signed-by=/etc/apt/keyrings/linux_signing_key.pub] http://dl.google.com/linux/chrome/deb/ stable main
     state: present
     filename: google-chrome
-    update_cache: true
 
 - name: Install Chrome
   become: true
   ansible.builtin.apt:
     name: google-chrome-stable
     state: present
-    force_apt_get: true
-    update_cache: true
+    register: apt_action
+    retries: 100
+    until: apt_action is success or ('Failed to lock apt for exclusive operation' not in apt_action.msg and '/var/lib/dpkg/lock' not in apt_action.msg)
