@@ -15,6 +15,6 @@
     
 - name: Install Chrome
   become: true
-  ansible.builtin.package:
+  ansible.builtin.apt:
     name: google-chrome-stable
     state: present
