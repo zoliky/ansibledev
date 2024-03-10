@@ -3,29 +3,7 @@
   hosts: "{{ target }}"
   connection: local # we're debugging, so the hosts may not exist
 
-  #pre_tasks:
-    # Testing
-    # Fail as early as possible to prevent issues during provisioning
-    #- name: Check memory and free space
-    #  ansible.builtin.assert:
-    #    that:
-          # Check that the system has over 1GB of free memory available
-          # and 20GB of disk space free
-    #      - "ansible_facts.memfree_gb > 1"
-    #      - "ansible_facts.diskfree_gb > 20"
-
-    #- name: Check if all variables are set and use the proper data type
-    #  ansible.builtin.assert:
-    #  that:
-    #     ..
-
-    #- name: Check the availability of the URLs from which DEB and RPM packages are obtained.
-    #  ansible.builtin.assert:
-    #  that:
-    #     ..
-
   tasks:
-    # Provisioning
     - name: Include roles
       ansible.builtin.include_role:
         name: "{{ item }}"
