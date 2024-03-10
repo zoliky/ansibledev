@@ -5,7 +5,7 @@
 
   tasks:
     # Testing
-    # Fail as early as possible to prevent later issues during provisioning
+    # Fail as early as possible to prevent issues during provisioning
     #- name: Check memory and free space
     #  ansible.builtin.assert:
     #    that:
@@ -14,7 +14,12 @@
     #      - "ansible_facts.memfree_gb > 1"
     #      - "ansible_facts.diskfree_gb > 20"
 
-    #- name: Check if all variables are set and they use the proper data type
+    #- name: Check if all variables are set and use the proper data type
+    #  ansible.builtin.assert:
+    #  that:
+    #     ..
+
+    #- name: Check the availability of the URLs from which DEB and RPM packages are obtained.
     #  ansible.builtin.assert:
     #  that:
     #     ..
