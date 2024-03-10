@@ -6,7 +6,7 @@ About
 
 This project will replace my old Ansible setup once it's finished.
 
-Work in progress
+-
 
 ```
 $ ansible-playbook workstation.yml -e "target=workstation"
