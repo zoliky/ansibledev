@@ -7,7 +7,7 @@
 - name: Add repository into repo list
   community.general.zypper_repository:
     name: google-chrome
-    description: "google-chrome repository"
+    description: google-chrome repository
     repo: http://dl.google.com/linux/chrome/rpm/stable/x86_64
     auto_import_keys: true
     state: present
