@@ -3,7 +3,7 @@
   hosts: "{{ target }}"
   connection: local # we're debugging, so the hosts may not exist
 
-  tasks:
+  #pre_tasks:
     # Testing
     # Fail as early as possible to prevent issues during provisioning
     #- name: Check memory and free space
@@ -23,7 +23,8 @@
     #  ansible.builtin.assert:
     #  that:
     #     ..
-    
+
+  tasks:
     # Provisioning
     - name: Include roles
       ansible.builtin.include_role:
