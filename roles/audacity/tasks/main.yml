@@ -1,5 +1,5 @@
 ---
-- name: Include OS specific variables
+- name: Include OS-specific variables
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
   vars:
     params:
@@ -10,7 +10,7 @@
       paths:
         - "vars"
 
-- name: Include OS specific tasks
+- name: Include OS-specific tasks
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
   vars:
     params:
