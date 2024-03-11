@@ -1,0 +1,6 @@
+---
+- name: Install Teamviewer
+  become: true
+  ansible.builtin.apt:
+    name: "{{ package_name }}"
+    state: present
