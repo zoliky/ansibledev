@@ -1,0 +1,6 @@
+---
+- name: Install Darktable
+  become: true
+  ansible.builtin.apt:
+    name: "{{ package_name }}"
+    state: present
