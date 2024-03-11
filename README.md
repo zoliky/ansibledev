@@ -25,7 +25,7 @@ $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 | openSUSE Leap 15.5                      | Work in progress |
 | openSUSE Tumbleweed                     | DONE             |
 | Red Hat Enterprise Linux                | Work in progress |
-| Ubuntu Linux                            | Work in progress |
+| Ubuntu Linux                            | DONE             |
 | Manjaro Linux                           | Work in progress |
 | MX Linux                                | DONE             |
 
