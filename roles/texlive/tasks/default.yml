@@ -1,0 +1,6 @@
+---
+- name: Install TeXLive
+  become: true
+  ansible.builtin.package:
+    name: "{{ package_name }}"
+    state: present
