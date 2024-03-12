@@ -20,7 +20,6 @@ Requirements
 - Podman (optional)
 - Git
 
-
 Dependencies
 ------------
 
