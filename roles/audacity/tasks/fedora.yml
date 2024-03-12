@@ -1,7 +1,6 @@
 ---
 - name: Install Audacity
   become: true
-  ansible.builtin.apt:
+  ansible.builtin.dnf:
     name: "{{ package_name }}"
-    update_cache: true
     state: present
