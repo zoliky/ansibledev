@@ -1,23 +1,20 @@
----
-- name: Update cache
-  ansible.builtin.apt:
-    update_cache: true
+---    
+- name: Include OS-specific variables
+  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution | lower }}.yml"
+        - "{{ ansible_os_family | lower }}.yml"
+        - default.yml
+      paths:
+        - "vars"
 
 - name: Install Audacity
   ansible.builtin.apt:
     name: "{{ package_name }}"
+    update_cache: true
     state: present
-    
-#- name: Include OS-specific variables
-#  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
-#  vars:
-#    params:
-#      files:
-#        - "{{ ansible_distribution | lower }}.yml"
-#        - "{{ ansible_os_family | lower }}.yml"
-#        - default.yml
-#      paths:
-#        - "vars"
 
 #- name: Include OS-specific tasks
 #  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
