@@ -9,7 +9,7 @@ platforms:
     image: docker.io/zoliky/fedora:latest
     pre_build_image: true
   - name: opensuse-tumbleweed
-    image: zoliky/opensuse-tumbleweed:latest
+    image: docker.io/zoliky/opensuse-tumbleweed:latest
     pre_build_image: true
 provisioner:
   name: ansible
