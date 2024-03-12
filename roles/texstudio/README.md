@@ -1,0 +1,37 @@
+TeXstudio
+=========
+
+Ansible role for installing TeXstudio.
+
+Requirements
+------------
+
+- Ansible 2.14 or later.
+
+Role variables
+--------------
+
+Dependencies
+------------
+
+No dependencies.
+
+Example Playbook
+----------------
+
+```
+---
+- hosts: localhost
+  tasks:
+    - ansible.builtin.include_role: texstudio
+```
+
+License
+-------
+
+BSD
+
+Author Information
+------------------
+
+Zoltan Kiraly &lt;zoltan.git@fastmail.com&gt;
