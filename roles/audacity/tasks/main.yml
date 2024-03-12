@@ -1,4 +1,8 @@
 ---
+- name: Update cache
+  ansible.builtin.apt:
+    update_cache: true
+
 - name: Install Audacity
   ansible.builtin.apt:
     name: "{{ package_name }}"
