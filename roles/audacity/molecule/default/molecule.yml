@@ -5,6 +5,9 @@ platforms:
   - name: debian12
     image: docker.io/zoliky/debian-12-bookworm:bookworm
     pre_build_image: true
+  - name: fedora39
+    image: docker.io/zoliky/fedora:latest
+    pre_build_image: true
 provisioner:
   name: ansible
 
