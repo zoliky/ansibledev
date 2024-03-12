@@ -1,0 +1,7 @@
+---
+- name: Install Cinnamon
+  become: true
+  ansible.builtin.apt:
+    name: "{{ package_name }}"
+    update_cache: true
+    state: present
