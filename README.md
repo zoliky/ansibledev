@@ -11,33 +11,6 @@ $ ansible-playbook workstation.yml -e "target=workstation"
 $ ansible-pull -U https://github.com/zoliky/ansibledev.git -C main
 ```
 
- 
-**Modules currently under development:**
-
-**`roles/chrome`:**
- 
-| Distribution                            | Status           |
-|-----------------------------------------|------------------|
-| Debian 12 Bookworm                      | DONE             |
-| Fedora 39                               | DONE             |
-| Linux Mint 21.3 Virginia                | DONE             |
-| Linux Mint Debian Edition 6 Faye        | DONE             |
-| openSUSE Leap 15.5                      | Work in progress |
-| openSUSE Tumbleweed                     | DONE             |
-| Red Hat Enterprise Linux                | Work in progress |
-| Ubuntu Linux                            | DONE             |
-| Manjaro Linux                           | Work in progress |
-| MX Linux                                | DONE             |
-
-**`roles/rpmfusion`:**
- 
-| Distribution                            | Status           |
-|-----------------------------------------|------------------|
-| Fedora 39                               | DONE             |
-| Red Hat Enterprise Linux                | Work in progress |
-| AlmaLinux                               | Work in progress |
-| Rocky Linux                             | Work in progress |
-
 Requirements
 ------------
 
