@@ -1,5 +1,0 @@
-- name: Install standard common packages
-  ansible.builtin.debug:
-    msg: "Installing {{ item }}"
-  loop: "{{ base_packages }}"
-

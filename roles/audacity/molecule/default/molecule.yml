@@ -2,6 +2,12 @@
 driver:
   name: podman
 platforms:
-  - name: instance
-    image: quay.io/centos/centos:stream8
+  #- name: instance
+  #  image: quay.io/centos/centos:stream8
+  #  pre_build_image: true
+  - name: debian12
+    image: docker.io/library/debian
     pre_build_image: true
+provisioner:
+  name: ansible
+
