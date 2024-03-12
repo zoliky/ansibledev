@@ -17,7 +17,7 @@ Requirements
 - Ansible 2.14 or later
 - Ansible Lint (optional)
 - Ansible Molecule (optional)
-- Podman
+- Podman (optional)
 - Git
 
 
