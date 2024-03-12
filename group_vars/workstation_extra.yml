@@ -1,0 +1,5 @@
+---
+workstation_roles:
+  - emacs
+  - texlive
+  - texstudio
