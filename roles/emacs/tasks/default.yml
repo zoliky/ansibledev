@@ -1,0 +1,6 @@
+---
+- name: Install Emacs
+  become: true
+  ansible.builtin.package:
+    name: "{{ package_name }}"
+    state: present
