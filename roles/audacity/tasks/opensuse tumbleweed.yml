@@ -4,5 +4,3 @@
   community.general.zypper:
     name: "{{ package_name }}"
     state: present
-    update_cache: true
-
