@@ -20,6 +20,12 @@ Requirements
 - Podman (optional)
 - Git
 
+**NOTE:** On openSUSE Leap 15.5, after installing Ansible, it's necessary to manually install the `community.general` module by running the following command:
+
+```
+$ ansible-galaxy collection install community.general
+```
+
 Dependencies
 ------------
 
