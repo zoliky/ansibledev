@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   gather_facts: true
-  tasks:
+  tasks:      
     - name: Check Audacity role
       ansible.builtin.include_role:
         name: audacity
