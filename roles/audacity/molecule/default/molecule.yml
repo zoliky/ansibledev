@@ -1,17 +1,14 @@
 ---
 dependency:
-  name: shell
-  command: 'ansible-galaxy collection install community.general'
-dependency:
   name: galaxy
 driver:
   name: podman
 platforms:
-  - name: debian12
-    image: docker.io/zoliky/debian:bookworm
+  - name: opensuse
+    image: docker.io/zoliky/opensuse-leap:15.5
     pre_build_image: true
-  - name: archlinux
-    image: docker.io/zoliky/archlinux:latest
+  - name: opensuse-tumbleweed
+    image: docker.io/zoliky/opensuse-tumbleweed:latest
     pre_build_image: true
 provisioner:
   name: ansible
