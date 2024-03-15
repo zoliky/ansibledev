@@ -1,5 +1,5 @@
 [workstation]
 localhost
 
-[workstation_developer]
-zoltandev.home.arpa
+[workstation_freebsd]
+zoltan.home.arpa

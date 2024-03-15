@@ -1,1 +1,7 @@
 ---
+workstation_roles:
+  - audacity
+  - blender
+  - calibre
+  - darktable
+  - filezilla
