@@ -1,0 +1,6 @@
+---
+- name: Install Darktable
+  become: true
+  community.general.pkgng:
+    name: "{{ package_name }}"
+    state: present
