@@ -2,5 +2,5 @@
 - name: Install GNOME
   become: true
   ansible.builtin.apt:
-    name: "{{ package_name }}"
+    name: task-gnome-desktop
     state: present

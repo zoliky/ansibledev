@@ -1,6 +1,0 @@
-- name: Enable Flatpak in GNOME Software
-  become: true
-  ansible.builtin.package:
-    name: gnome-software-plugin-flatpak
-    state: present
-  when: ansible_facts['distribution'] == "Debian"

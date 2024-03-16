@@ -1,9 +1,0 @@
-- name: Disable hot corners
-  community.general.dconf:
-    key: "/org/gnome/desktop/interface/enable-hot-corners"
-    value: "{{ disable_hot_corners }}"
-
-- name: Enable all window buttons
-  community.general.dconf:
-    key: "/org/gnome/desktop/wm/preferences/button-layout"
-    value: "'appmenu:minimize,maximize,close'"
