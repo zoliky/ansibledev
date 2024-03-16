@@ -1,0 +1,6 @@
+---
+- name: Install Blender
+  become: true
+  community.general.pacman:
+    name: "{{ package_name }}"
+    state: present
