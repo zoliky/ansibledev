@@ -9,6 +9,7 @@
         - default.yml
       paths:
         - "vars"
+      skip: true
 
 #- name: Include OS-specific variables
 #  ansible.builtin.include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
