@@ -1,4 +1,5 @@
 ---
 workstation_roles:
+  - gnome
   - audacity
   - blender

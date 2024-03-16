@@ -1,7 +1,7 @@
 GNOME
 =====
 
-Ansible role for configuring the GNOME desktop environment.
+Ansible role for installing and configuring the GNOME desktop environment.
 
 Requirements
 ------------

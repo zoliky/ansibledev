@@ -1,1 +1,6 @@
 ---
+- name: Install GNOME
+  become: true
+  ansible.builtin.apt:
+    name: "{{ package_name }}"
+    state: present
