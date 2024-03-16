@@ -1,0 +1,6 @@
+---
+- name: Install Blender
+  become: true
+  ansible.builtin.dnf:
+    name: "{{ package_name }}"
+    state: present
