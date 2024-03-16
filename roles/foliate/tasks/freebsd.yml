@@ -1,0 +1,6 @@
+---
+- name: Install Foliate
+  become: true
+  community.general.pkgng:
+    name: "{{ package_name }}"
+    state: present
