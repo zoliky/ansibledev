@@ -5,6 +5,8 @@
     name: "{{ package_name }}"
     state: present
 
+# TODO: Add task to mount /proc
+
 - name: Enable D-BUS service
   community.general.sysrc:
     name: dbus_enable
