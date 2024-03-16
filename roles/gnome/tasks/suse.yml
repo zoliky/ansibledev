@@ -1,0 +1,7 @@
+---
+- name: Install GNOME
+  become: true
+  community.general.zypper:
+    name: "{{ package_name }}"
+    type: pattern
+    state: present
