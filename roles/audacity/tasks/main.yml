@@ -6,9 +6,8 @@
       files:
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
-        - default.yml
       paths:
-        - ../vars
+        - "vars"
       skip: true
 
 - name: Include OS-specific tasks
