@@ -1,0 +1,12 @@
+---
+- name: Install GNOME
+  become: true
+  community.general.pkgng:
+    name: "{{ package_name }}"
+    state: present
+
+- name: Enable D-BUS service
+  community.general.sysrc:
+    name: dbus_enable
+    value: "YES"
+    state: present
