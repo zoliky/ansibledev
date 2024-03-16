@@ -1,4 +1,5 @@
 ---
 package_name: gnome
+package_python_psutil: python3-psutil
 
 disable_hot_corners: true
