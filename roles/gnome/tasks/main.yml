@@ -1,9 +1,9 @@
 ---
-- name: Install dependencies
-  become: true
-  ansible.builtin.package:
-    name: "{{ package_python_psutil }}"
-    state: present
+#- name: Install dependencies
+#  become: true
+#  ansible.builtin.package:
+#    name: "{{ package_python_psutil }}"
+#    state: present
 
 - name: Include OS specific variables
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
@@ -25,6 +25,6 @@
         - "{{ ansible_os_family | lower }}.yml"
         - default.yml
 
-- name: Include other tasks
-  block:
-    - ansible.builtin.include_tasks: tweaks.yml
+#- name: Include other tasks
+#  block:
+#    - ansible.builtin.include_tasks: tweaks.yml
