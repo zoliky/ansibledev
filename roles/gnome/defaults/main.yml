@@ -1,2 +1,4 @@
 ---
 package_name: gnome
+
+disable_hot_corners: true
