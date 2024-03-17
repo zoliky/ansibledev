@@ -8,7 +8,7 @@
         - "{{ ansible_os_family | lower }}.yml"
       paths:
         - "vars"
-  when: params.files | length > 0
+  when: lookup('ansible.builtin.first_found', params) != []
 
 - name: Include OS-specific tasks
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
