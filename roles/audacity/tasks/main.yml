@@ -6,9 +6,9 @@
       files:
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
-        - "default.yml"
       paths:
         - "{{ role_path }}/vars"
+      skip: true
 
 - name: Print variable
   ansible.builtin.debug:
