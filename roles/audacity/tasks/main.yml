@@ -1,8 +1,9 @@
 ---
 - name: Include OS-specific varables
-  ansible.builtin.include_vars: "{{ item }}"
-  with_first_found:
-    - files:
+  ansible.builtin.include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
+  vars:
+    params:
+      files:
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
         - "default.yml"
