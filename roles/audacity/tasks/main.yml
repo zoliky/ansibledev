@@ -22,5 +22,5 @@
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
       paths:
-        - "{{ role_path }}/vars"
+        - "{{ role_path }}/tasks"
       skip: true
