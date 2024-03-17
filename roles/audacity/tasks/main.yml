@@ -5,14 +5,24 @@
     - files:
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
+        - "default.yml"
       paths:
         - "{{ role_path }}/vars"
-      skip: true
 
 - name: Print variable
   ansible.builtin.debug:
     msg: "Name of package: {{ package_name }}"
 
+#- name: Include OS-specific tasks
+#  ansible.builtin.include_tasks: "{{ item }}"
+#  with_first_found:
+#    - files:
+#        - "{{ ansible_distribution | lower }}.yml"
+#        - "{{ ansible_os_family | lower }}.yml"
+#        - "default.yml"
+#      paths:
+#        - "{{ role_path }}/vars"
+    
 # - name: Include OS-specific tasks
 #  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
 #  vars:
