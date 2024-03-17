@@ -1,7 +1,6 @@
 ---
 - name: Include variables from the first found file
-  ansible.builtin.set_fact:
-    vars_file: "{{ lookup('ansible.builtin.first_found', params) }}"
+  ansible.builtin.include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
   vars:
     params:
       files:
@@ -9,13 +8,14 @@
         - "{{ ansible_os_family | lower }}.yml"
       paths:
         - "vars"
-  when: vars_file is not none
+  ignore_errors: true
+  register: vars_file_result
 
 - name: Skip task if no file found
   ansible.builtin.debug:
     msg: "No file found, skipping task"
-  when: vars_file is none
-  
+  when: vars_file_result | failed
+
 - name: Include OS-specific tasks
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
   vars:
