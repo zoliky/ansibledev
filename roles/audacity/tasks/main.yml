@@ -1,8 +1,8 @@
 ---
 - name: Include OS-specific varables
-  ansible.builtin.include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ _item }}"
   loop_control:
-    loop_var: item
+    loop_var: _item
   with_first_found:
     - files:
         - "{{ ansible_distribution | lower }}.yml"
