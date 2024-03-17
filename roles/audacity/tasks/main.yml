@@ -1,20 +1,13 @@
 ---
-- name: Include variables from the first found file
-  ansible.builtin.include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
-  vars:
-    params:
-      files:
-        - "{{ ansible_distribution | lower }}.yml"
-        - "{{ ansible_os_family | lower }}.yml"
+- name: Set version-specific variables for role
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution }}_{{ ansible_distribution_version }}.yml"
+        - "{{ ansible_distribution }}.yml"
       paths:
-        - "vars"
-  ignore_errors: true
-  register: vars_file_result
-
-- name: Skip task if no file found
-  ansible.builtin.debug:
-    msg: "No file found, skipping task"
-  when: vars_file_result | failed
+        - "{{ role_path }}/vars"
+      skip: true
 
 - name: Include OS-specific tasks
   ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
