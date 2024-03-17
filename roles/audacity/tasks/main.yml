@@ -9,6 +9,10 @@
         - "{{ role_path }}/vars"
       skip: true
 
+- name: Print variable
+  ansible.builtin.debug:
+    msg: "Name of package: {{ package_name }}"
+
 # - name: Include OS-specific tasks
 #  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
 #  vars:
