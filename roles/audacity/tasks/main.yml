@@ -1,15 +1,15 @@
 ---
-- name: Set version-specific variables for role
+- name: Include OS-specific varables
   ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - files:
-        - "{{ ansible_distribution }}_{{ ansible_distribution_version }}.yml"
-        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_distribution | lower }}.yml"
+        - "{{ ansible_os_family | lower }}.yml"
       paths:
         - "{{ role_path }}/vars"
       skip: true
 
-#- name: Include OS-specific tasks
+# - name: Include OS-specific tasks
 #  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
 #  vars:
 #    params:
