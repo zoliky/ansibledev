@@ -1,5 +1,5 @@
 ---
-- name: Install Blender
+- name: Install Calibre
   become: true
   community.general.pacman:
     name: "{{ package_name }}"

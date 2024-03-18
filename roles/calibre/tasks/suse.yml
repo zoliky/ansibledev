@@ -1,6 +1,6 @@
 ---
-- name: Install Blender
+- name: Install Calibre
   become: true
-  community.general.pacman:
+  community.general.zypper:
     name: "{{ package_name }}"
     state: present
