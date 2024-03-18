@@ -1,5 +1,5 @@
 ---
-- name: Install Audacity
+- name: Install Firefox
   become: true
   ansible.builtin.package:
     name: "{{ package_name }}"
