@@ -1,4 +1,4 @@
 ---
 workstation_roles:
   - audacity
-#  - blender
+  - blender
