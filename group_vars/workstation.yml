@@ -6,3 +6,6 @@ workstation_roles:
   - chrome
   - darktable
   - filezilla
+  - gimp
+  - inkscape
+  - vlc

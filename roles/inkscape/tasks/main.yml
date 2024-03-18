@@ -1,6 +1,24 @@
 ---
-- name: Install Inkscape
-  become: true
-  ansible.builtin.package:
-    name: "{{ package_name }}"
-    state: present
+- name: Include OS-specific variables
+  ansible.builtin.include_vars: "{{ var_source }}"
+  loop_control:
+    loop_var: var_source
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution | lower }}.yml"
+        - "{{ ansible_os_family | lower }}.yml"
+      paths:
+        - "{{ role_path }}/vars"
+      skip: true
+
+- name: Include OS-specific tasks
+  ansible.builtin.include_tasks: "{{ var_source }}"
+  loop_control:
+    loop_var: var_source
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution | lower }}.yml"
+        - "{{ ansible_os_family | lower }}.yml"
+      paths:
+        - "{{ role_path }}/tasks"
+      skip: true

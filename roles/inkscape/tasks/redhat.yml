@@ -1,5 +1,5 @@
 ---
-- name: Install Audacity
+- name: Install Inkscape
   become: true
   ansible.builtin.dnf:
     name: "{{ package_name }}"
