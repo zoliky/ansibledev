@@ -1,8 +1,8 @@
 ---
-- name: Include OS-specific varables
-  ansible.builtin.include_vars: "{{ _item }}"
+- name: Include OS-specific variables
+  ansible.builtin.include_vars: "{{ var_source }}"
   loop_control:
-    loop_var: _item
+    loop_var: var_source
   with_first_found:
     - files:
         - "{{ ansible_distribution | lower }}.yml"
@@ -16,7 +16,9 @@
     msg: "Name of package: {{ package_name }}"
 
 - name: Include OS-specific tasks
-  ansible.builtin.include_tasks: "{{ item }}"
+  ansible.builtin.include_tasks: "{{ var_source }}"
+  loop_control:
+    loop_var: var_source
   with_first_found:
     - files:
         - "{{ ansible_distribution | lower }}.yml"
