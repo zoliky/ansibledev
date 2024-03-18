@@ -1,5 +1,4 @@
 ---
-# OK
 - name: Add Chrome repository key
   become: true
   ansible.builtin.get_url:

@@ -1,0 +1,6 @@
+---
+- name: Install Thunderbird
+  become: true
+  community.general.zypper:
+    name: "{{ package_name }}"
+    state: present

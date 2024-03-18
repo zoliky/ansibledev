@@ -1,5 +1,5 @@
 ---
-- name: Install OBS
+- name: Install Foliate
   become: true
   ansible.builtin.apt:
     name: "{{ package_name }}"

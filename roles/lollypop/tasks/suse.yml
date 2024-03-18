@@ -1,8 +1,6 @@
 ---
-- name: Install OBS
+- name: Install Lollypop
   become: true
   community.general.zypper:
     name: "{{ package_name }}"
     state: present
-    update_cache: true
-

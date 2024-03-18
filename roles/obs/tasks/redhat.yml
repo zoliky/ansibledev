@@ -1,6 +1,6 @@
 ---
 - name: Install OBS
   become: true
-  ansible.builtin.apt:
+  ansible.builtin.dnf:
     name: "{{ package_name }}"
     state: present

@@ -6,6 +6,9 @@ workstation_roles:
   - chrome
   - darktable
   - filezilla
+  - foliate
   - gimp
   - inkscape
+  - lollypop
+  - thunderbird
   - vlc
