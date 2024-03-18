@@ -8,15 +8,16 @@ Requirements
 
 - Ansible 2.14 or later.
 
+This role was tested on:
+
+- FreeBSD 14
+- Fedora 39
+- Archlinux 2024.03.01
+- Debian 12, 13-Trixie (Testing)
+- openSUSE Leap 15.5, Tumbleweed
+
 Role variables
 --------------
-
-| ansible_distribution | ansible_os_family |
-| -------------------- | ----------------- |
-| Debian               | Debian            |
-| Linux Mint           | Debian            |
-| openSUSE Leap        | Suse              |
-| Fedora               | RedHat            |
 
 Dependencies
 ------------
