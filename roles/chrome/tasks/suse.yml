@@ -1,5 +1,4 @@
 ---
-# OK
 - name: Add RPM signing key
   become: true
   ansible.builtin.rpm_key:
