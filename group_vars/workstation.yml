@@ -4,3 +4,5 @@ workstation_roles:
   - blender
   - calibre
   - chrome
+  - darktable
+  - filezilla

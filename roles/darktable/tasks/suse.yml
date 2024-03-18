@@ -1,6 +1,6 @@
 ---
 - name: Install Darktable
   become: true
-  ansible.builtin.apt:
+  community.general.zypper:
     name: "{{ package_name }}"
     state: present

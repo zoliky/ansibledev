@@ -1,6 +1,6 @@
 ---
-- name: Install Darktable
+- name: Install FileZilla
   become: true
-  ansible.builtin.apt:
+  ansible.builtin.dnf:
     name: "{{ package_name }}"
     state: present
