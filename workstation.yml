@@ -1,7 +1,7 @@
 ---
 - name: Setup a workstation
   hosts: "{{ target }}"
-  connection: local # we're debugging, so the hosts may not exist
+  connection: local # no need for ssh
 
   tasks:
     - name: Include roles
