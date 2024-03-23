@@ -2,5 +2,5 @@
 - name: Install Audacity
   become: true
   community.general.pacman:
-    name: "{{ package_name }}"
+    name: "{{ package }}"
     state: present

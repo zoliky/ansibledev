@@ -2,5 +2,5 @@
 - name: Install Audacity
   become: true
   ansible.builtin.dnf:
-    name: "{{ package_name }}"
+    name: "{{ package }}"
     state: present
